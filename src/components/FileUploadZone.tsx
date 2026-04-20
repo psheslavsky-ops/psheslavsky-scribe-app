@@ -46,7 +46,7 @@ const FileUploadZone = ({ onFileSelect, disabled }: FileUploadZoneProps) => {
       onDragLeave={handleDragLeave}
       onClick={handleClick}
       className={`
-        border-2 rounded p-12 text-center cursor-pointer transition-colors
+        border-2 border-solid rounded p-16 text-center cursor-pointer transition-colors
         ${isDragging ? "border-primary bg-primary/5" : "border-primary/40 hover:border-primary"}
         ${disabled ? "opacity-50 cursor-not-allowed" : ""}
       `}

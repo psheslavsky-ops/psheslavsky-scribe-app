@@ -315,22 +315,27 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background transition-colors">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
+      {/* Psheslavsky branding — fixed top-right, separate from nav icons */}
+      <div className="fixed top-4 right-4 z-50 pointer-events-none select-none">
+        <span className="font-mono text-xs font-semibold tracking-wide relative inline-flex items-baseline">
+          <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">Psheslavsky</span>
+          <sup className="text-[9.5px] text-primary -ml-0.5 -translate-y-1 rotate-[-20deg]">©</sup>
+        </span>
+      </div>
+
+      <div className="w-full max-w-[1200px] mx-auto px-6 sm:px-10 py-6 sm:py-10">
         {/* Header */}
         <header className="flex items-start justify-between mb-10 sm:mb-14">
           <div>
             <h1 className="font-mono text-xl sm:text-2xl font-bold tracking-tight text-foreground mb-2">
               Scribe<span className="text-primary">_</span>
             </h1>
-            <p className="text-muted-foreground text-xs sm:text-sm max-w-md">
+            <p className="text-muted-foreground text-xs sm:text-sm max-w-xl">
               {t("service_subtitle")}
             </p>
           </div>
-          <div className="flex items-center gap-2 sm:gap-3">
-            <span className="font-mono text-xs select-none font-semibold tracking-wide relative inline-flex items-baseline">
-              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">Psheslavsky</span>
-              <sup className="text-[9.5px] text-primary -ml-0.5 -translate-y-1 rotate-[-20deg]">©</sup>
-            </span>
+          {/* Nav icons only — Psheslavsky is in fixed corner */}
+          <div className="flex items-center gap-2 sm:gap-3 pr-28">
             <LanguageSwitcher />
             <ThemeToggle />
             <div className="relative">
@@ -411,7 +416,7 @@ const Index = () => {
             <h2 className="font-mono text-xs font-medium tracking-wider uppercase text-muted-foreground mb-6">
               {t("features")}
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6">
               {[
                 { icon: FileAudio, title: t("feat_record"), desc: t("feat_record_desc") },
                 { icon: Sparkles, title: t("feat_ai"), desc: t("feat_ai_desc") },
