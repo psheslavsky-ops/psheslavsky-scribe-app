@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Mic, Square, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import { useI18n } from "@/lib/i18n";
 
 interface AudioRecorderProps {
   onRecordingComplete: (file: File) => void;
@@ -28,6 +29,7 @@ const pickMimeType = (): string => {
 };
 
 const AudioRecorder = ({ onRecordingComplete, disabled }: AudioRecorderProps) => {
+  const { t } = useI18n();
   const [isRecording, setIsRecording]   = useState(false);
   // FIX (Bug 6): new state for the assembly phase between stop and callback
   const [isAssembling, setIsAssembling] = useState(false);
@@ -175,7 +177,7 @@ const AudioRecorder = ({ onRecordingComplete, disabled }: AudioRecorderProps) =>
       <div className="flex items-center gap-3">
         <Loader2 className="h-4 w-4 animate-spin text-muted-foreground" />
         <span className="font-mono text-xs text-muted-foreground">
-          Сохранение записи…
+          {t("assembling")}
         </span>
       </div>
     );
@@ -187,7 +189,7 @@ const AudioRecorder = ({ onRecordingComplete, disabled }: AudioRecorderProps) =>
         <>
           <Button variant="destructive" size="sm" onClick={stopRecording} className="gap-2">
             <Square className="h-3 w-3" />
-            Остановить
+            {t("stop_recording")}
           </Button>
           <div className="flex items-center gap-2">
             <span className="relative flex h-3 w-3">
@@ -209,7 +211,7 @@ const AudioRecorder = ({ onRecordingComplete, disabled }: AudioRecorderProps) =>
           className="gap-2"
         >
           <Mic className="h-4 w-4" />
-          Записать аудио
+          {t("record_audio_btn")}
         </Button>
       )}
     </div>

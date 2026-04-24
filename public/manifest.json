@@ -1,0 +1,13 @@
+{
+  "name": "Scribe_",
+  "short_name": "Scribe_",
+  "description": "Сервис транскрибации бизнес-аналитика с ИИ-артефактами",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0050FF",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

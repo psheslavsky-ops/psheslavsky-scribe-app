@@ -98,6 +98,14 @@ const T: Translations = {
   "resampling": { ru: "Сжатие до 16 кГц моно...", en: "Resampling to 16kHz mono...", de: "Resampling auf 16kHz Mono...", es: "Remuestreo a 16kHz mono...", fr: "Rééchantillonnage 16kHz mono...", pt: "Reamostragem para 16kHz mono...", zh: "重采样至16kHz单声道...", ja: "16kHzモノにリサンプリング...", ko: "16kHz 모노로 리샘플링...", ar: "...إعادة العينة إلى 16 كيلو هرتز أحادي" },
   "transcribing": { ru: "Транскрибация...", en: "Transcribing...", de: "Transkription...", es: "Transcribiendo...", fr: "Transcription...", pt: "Transcrevendo...", zh: "转录中...", ja: "文字起こし中...", ko: "전사 중...", ar: "...النسخ" },
   "transcribing_chunk": { ru: "Транскрибация чанка", en: "Transcribing chunk", de: "Chunk transkribieren", es: "Transcribiendo fragmento", fr: "Transcription du fragment", pt: "Transcrevendo trecho", zh: "转录分块", ja: "チャンク文字起こし", ko: "청크 전사", ar: "نسخ الجزء" },
+  // Upload zone
+  "drop_file_here":    { ru: "Перетащите файл сюда", en: "Drop file here", de: "Datei hier ablegen", es: "Suelta el archivo aquí", fr: "Déposez le fichier ici", pt: "Solte o arquivo aqui", zh: "将文件拖放到此处", ja: "ここにファイルをドロップ", ko: "여기에 파일을 놓으세요", ar: "أسقط الملف هنا" },
+  "or_click_to_select":{ ru: "или нажмите для выбора файла", en: "or click to select file", de: "oder klicken zum Auswählen", es: "o haga clic para seleccionar", fr: "ou cliquez pour sélectionner", pt: "ou clique para selecionar", zh: "或点击选择文件", ja: "またはクリックして選択", ko: "또는 클릭하여 파일 선택", ar: "أو انقر للاختيار" },
+  "file_formats":      { ru: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · без ограничения размера", en: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · no size limit", de: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · kein Größenlimit", es: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · sin límite de tamaño", fr: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · sans limite de taille", pt: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · sem limite de tamanho", zh: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · 无大小限制", ja: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · サイズ制限なし", ko: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · 크기 제한 없음", ar: "MP3, WAV, M4A, FLAC, MP4, WebM, OGG · بلا حد للحجم" },
+  // Recorder
+  "record_audio_btn":  { ru: "Записать аудио", en: "Record audio", de: "Audio aufnehmen", es: "Grabar audio", fr: "Enregistrer", pt: "Gravar áudio", zh: "录制音频", ja: "録音", ko: "녹음", ar: "تسجيل الصوت" },
+  "stop_recording":    { ru: "Остановить", en: "Stop", de: "Stopp", es: "Detener", fr: "Arrêter", pt: "Parar", zh: "停止", ja: "停止", ko: "중지", ar: "إيقاف" },
+  "assembling":        { ru: "Сохранение записи…", en: "Saving recording…", de: "Aufnahme speichern…", es: "Guardando grabación…", fr: "Sauvegarde…", pt: "Salvando gravação…", zh: "保存录音…", ja: "録音を保存中…", ko: "녹음 저장 중…", ar: "…حفظ التسجيل" },
 };
 
 interface I18nContextType {

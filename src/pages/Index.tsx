@@ -315,8 +315,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background transition-colors">
-      {/* Psheslavsky branding — fixed top-right, separate from nav icons */}
-      <div className="fixed top-4 right-4 z-50 pointer-events-none select-none">
+      {/* Psheslavsky© — фиксированный правый верхний угол, поверх всего */}
+      <div className="fixed top-3 right-4 z-50 pointer-events-none select-none">
         <span className="font-mono text-xs font-semibold tracking-wide relative inline-flex items-baseline">
           <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">Psheslavsky</span>
           <sup className="text-[9.5px] text-primary -ml-0.5 -translate-y-1 rotate-[-20deg]">©</sup>
@@ -334,8 +334,8 @@ const Index = () => {
               {t("service_subtitle")}
             </p>
           </div>
-          {/* Nav icons only — Psheslavsky is in fixed corner */}
-          <div className="flex items-center gap-2 sm:gap-3 pr-28">
+          {/* Иконки навигации — выровнены по правому краю контента (1200px) */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <LanguageSwitcher />
             <ThemeToggle />
             <div className="relative">

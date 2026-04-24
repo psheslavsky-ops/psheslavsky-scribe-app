@@ -67,15 +67,14 @@ const Auth = () => {
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
-      {/* Psheslavsky branding — fixed top-right corner, separate from nav */}
-      <div className="fixed top-4 right-4 z-50 pointer-events-none select-none">
+      {/* Psheslavsky© — фиксированный правый верхний угол */}
+      <div className="fixed top-3 right-4 z-50 pointer-events-none select-none">
         <span className="font-mono text-xs font-semibold tracking-wide relative inline-flex items-baseline">
           <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">Psheslavsky</span>
           <sup className="text-[9.5px] text-primary -ml-0.5 -translate-y-1 rotate-[-20deg]">©</sup>
         </span>
       </div>
-      {/* Nav icons — language + theme, offset from branding */}
-      <div className="absolute top-4 right-4 flex items-center gap-3 pr-24">
+      <div className="absolute top-4 right-6 flex items-center gap-3">
         <LanguageSwitcher />
         <ThemeToggle />
       </div>

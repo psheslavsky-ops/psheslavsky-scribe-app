@@ -41,7 +41,14 @@ const TranscriptView = ({
   onGenerateProtocol, onGenerateBusinessReqs, onGenerateVisionScope,
   onGenerateSummary, onGenerateUserStories, onGenerateUseCases, onGenerateFlowchart,
 }: TranscriptViewProps) => {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
+
+  // Map language code to locale for date formatting
+  const LOCALE_MAP: Record<string, string> = {
+    ru: "ru-RU", en: "en-US", de: "de-DE", es: "es-ES",
+    fr: "fr-FR", pt: "pt-BR", zh: "zh-CN", ja: "ja-JP", ko: "ko-KR", ar: "ar-SA",
+  };
+  const dateLocale = LOCALE_MAP[lang] || "en-US";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(entry.text || "");
@@ -73,7 +80,7 @@ const TranscriptView = ({
           <div className="min-w-0">
             <p className="font-mono text-sm text-foreground truncate">{entry.fileName}</p>
             <p className="text-xs text-muted-foreground mt-0.5">
-              {entry.timestamp.toLocaleString("ru-RU")}
+              {entry.timestamp.toLocaleString(dateLocale)}
             </p>
           </div>
         </div>
