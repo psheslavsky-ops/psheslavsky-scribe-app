@@ -21,7 +21,7 @@ const LanguageSwitcher = () => {
       <button
         onClick={() => setOpen(o => !o)}
         title="Language"
-        className="w-8 h-8 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+        className="w-8 h-8 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
       >
         <Globe className="h-4 w-4" />
       </button>
@@ -52,18 +52,12 @@ const LanguageSwitcher = () => {
                   className={`w-full flex items-center gap-3 px-4 py-2 transition-all font-mono text-xs ${
                     isActive
                       ? "text-primary bg-primary/6"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
+                      : "text-muted-foreground hover:text-foreground hover:bg-primary/8"
                   }`}
                 >
-                  {/* Flag */}
+                  {/* Flag emoji */}
                   <span className="text-base leading-none w-5 text-center flex-shrink-0">
                     {l.flag}
-                  </span>
-                  {/* Lang code badge */}
-                  <span className={`text-[10px] font-semibold tracking-wider uppercase w-6 flex-shrink-0 ${
-                    isActive ? "text-primary" : "text-muted-foreground"
-                  }`}>
-                    {l.code}
                   </span>
                   {/* Lang name */}
                   <span className={`flex-1 text-left text-xs ${isActive ? "font-semibold text-primary" : ""}`}>

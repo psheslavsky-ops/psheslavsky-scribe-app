@@ -74,7 +74,7 @@ const Auth = () => {
           <sup className="text-[9.5px] text-primary -ml-0.5 -translate-y-1 rotate-[-20deg]">©</sup>
         </span>
       </div>
-      <div className="absolute top-4 right-6 flex items-center gap-3">
+      <div className="absolute top-4 right-36 flex items-center gap-3">
         <LanguageSwitcher />
         <ThemeToggle />
       </div>

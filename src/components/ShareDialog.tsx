@@ -105,7 +105,7 @@ const ShareDialog = ({ isOpen, onClose }: ShareDialogProps) => {
           </div>
           <button
             onClick={onClose}
-            className="w-7 h-7 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
+            className="w-7 h-7 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
           >
             <X className="h-3 w-3" />
           </button>
