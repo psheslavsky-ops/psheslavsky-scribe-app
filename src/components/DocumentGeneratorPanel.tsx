@@ -58,7 +58,7 @@ function injectDate(text: string, date: string): string {
 function buildDocument(raw: string, date: string, docType?: string): string {
   let text = stripMarkdown(raw);
   text = injectDate(text, date);
-  return text.trimEnd() + "\n\nБизнес-аналитик     А.И. Пшеславский";
+  return text.trimEnd() + "\n\nБизнес-аналитик";
 }
 
 /** Determine line type for rendering */

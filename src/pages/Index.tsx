@@ -334,22 +334,26 @@ const Index = () => {
               {t("service_subtitle")}
             </p>
           </div>
-          {/* Иконки навигации — выровнены по правому краю контента (1200px) */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          {/* Иконки навигации — тёмная группа-пилюля */}
+          <div className="flex items-center gap-0.5 bg-foreground/8 dark:bg-foreground/10 rounded-xl px-1.5 py-1.5 border border-border/40">
             <LanguageSwitcher />
             <ThemeToggle />
             <div className="relative">
-              <Button variant="ghost" size="icon" onClick={() => setShowShare(true)} title={t("share_friend")} className="h-8 w-8">
+              <Button variant="ghost" size="icon" onClick={() => setShowShare(true)} title={t("share_friend")} className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-foreground/10">
                 <Share2 className="h-4 w-4" />
               </Button>
               {showShareTooltip && (
-                <div className="absolute right-0 top-full mt-2 w-56 bg-primary text-primary-foreground text-xs rounded-lg px-3 py-2 shadow-lg animate-in fade-in slide-in-from-top-2 z-50 pointer-events-none transition-opacity duration-1000">
-                  <div className="absolute -top-1.5 right-3 w-3 h-3 bg-primary rotate-45" />
-                  {t("share_tooltip")}
+                <div className="absolute right-0 top-full mt-2.5 w-52 rounded-xl px-3.5 py-2.5 animate-in fade-in slide-in-from-top-2 z-50 pointer-events-none"
+                  style={{ background: "hsl(222,20%,14%)", boxShadow: "0 8px 24px rgba(0,0,0,.3), 0 0 0 1px rgba(255,255,255,.06)" }}>
+                  <div className="absolute -top-[5px] right-3.5 w-2.5 h-2.5 rotate-45" style={{ background: "hsl(222,20%,14%)" }} />
+                  <div className="flex items-start gap-2">
+                    <Share2 className="h-3.5 w-3.5 mt-0.5 flex-shrink-0" style={{ color: "hsl(220,100%,65%)" }} />
+                    <span className="font-mono text-xs leading-relaxed" style={{ color: "hsl(0,0%,90%)" }}>{t("share_tooltip")}</span>
+                  </div>
                 </div>
               )}
             </div>
-            <Button variant="ghost" size="icon" onClick={handleSignOut} title="Выйти" className="h-8 w-8">
+            <Button variant="ghost" size="icon" onClick={handleSignOut} title="Выйти" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-foreground/10">
               <LogOut className="h-4 w-4" />
             </Button>
           </div>

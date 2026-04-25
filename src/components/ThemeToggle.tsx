@@ -17,7 +17,7 @@ const ThemeToggle = () => {
       variant="ghost"
       size="icon"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="h-8 w-8"
+      className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-foreground/10"
       title={isDark ? "Переключить на светлую тему" : "Переключить на тёмную тему"}
     >
       {/* Show Moon when light (to switch to dark), Sun when dark (to switch to light) */}
