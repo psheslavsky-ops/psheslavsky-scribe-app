@@ -55,11 +55,10 @@ function injectDate(text: string, date: string): string {
 }
 
 /** Build final document: strip markdown, inject date, append footer */
-function buildDocument(raw: string, date: string): string {
+function buildDocument(raw: string, date: string, docType?: string): string {
   let text = stripMarkdown(raw);
   text = injectDate(text, date);
-  text = text.trimEnd() + "\n\nБизнес-аналитик";
-  return text;
+  return text.trimEnd() + "\n\nБизнес-аналитик     А.И. Пшеславский";
 }
 
 /** Determine line type for rendering */
@@ -159,7 +158,7 @@ const DocumentGeneratorPanel = ({ isOpen, onClose, transcript, documentType }: P
   // Build the formatted document for display and export
   // Flowchart stays as raw XML — no date/footer/markdown stripping
   const formattedContent = rawContent
-    ? (isFlowchart ? rawContent : buildDocument(rawContent, genDate))
+    ? (isFlowchart ? rawContent : buildDocument(rawContent, genDate, documentType))
     : "";
   const canSave = isComplete && rawContent.length > 0;
 

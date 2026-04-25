@@ -32,7 +32,7 @@ function injectDate(text: string, date: string): string {
 function buildDocument(raw: string, date: string): string {
   let text = stripMarkdown(raw);
   text = injectDate(text, date);
-  return text.trimEnd() + "\n\nБизнес-аналитик";
+  return text.trimEnd() + "\n\nБизнес-аналитик     А.И. Пшеславский";
 }
 
 type LineType = "title" | "date" | "heading" | "empty" | "body" | "footer";
