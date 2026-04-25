@@ -334,12 +334,12 @@ const Index = () => {
               {t("service_subtitle")}
             </p>
           </div>
-          {/* Иконки навигации — тёмная группа-пилюля */}
-          <div className="flex items-center gap-0.5 bg-foreground/8 dark:bg-foreground/10 rounded-xl px-1.5 py-1.5 border border-border/40">
+          {/* Иконки навигации */}
+          <div className="flex items-center gap-2 sm:gap-3">
             <LanguageSwitcher />
             <ThemeToggle />
             <div className="relative">
-              <Button variant="ghost" size="icon" onClick={() => setShowShare(true)} title={t("share_friend")} className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-foreground/10">
+              <Button variant="ghost" size="icon" onClick={() => setShowShare(true)} title={t("share_friend")} className="h-8 w-8 rounded-lg border border-border text-muted-foreground hover:bg-primary/10 hover:text-primary">
                 <Share2 className="h-4 w-4" />
               </Button>
               {showShareTooltip && (
@@ -353,7 +353,7 @@ const Index = () => {
                 </div>
               )}
             </div>
-            <Button variant="ghost" size="icon" onClick={handleSignOut} title="Выйти" className="h-8 w-8 rounded-lg text-muted-foreground hover:text-foreground hover:bg-foreground/10">
+            <Button variant="ghost" size="icon" onClick={handleSignOut} title="Выйти" className="h-8 w-8 rounded-lg border border-border text-muted-foreground hover:bg-primary/10 hover:text-primary">
               <LogOut className="h-4 w-4" />
             </Button>
           </div>

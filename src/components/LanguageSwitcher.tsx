@@ -21,7 +21,7 @@ const LanguageSwitcher = () => {
       <button
         onClick={() => setOpen(o => !o)}
         title="Language"
-        className="w-8 h-8 rounded-lg border-0 flex items-center justify-center text-muted-foreground hover:bg-foreground/10 hover:text-foreground transition-colors"
+        className="w-8 h-8 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:bg-primary/10 hover:text-primary transition-colors"
       >
         <Globe className="h-4 w-4" />
       </button>
